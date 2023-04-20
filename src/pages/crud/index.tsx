@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card } from '@arco-design/web-react';
 
 const Crud = () => {
