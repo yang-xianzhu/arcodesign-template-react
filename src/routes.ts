@@ -28,7 +28,7 @@ export const routes: IRoute[] = [
   },
   {
     name: 'Crud',
-    key: 'crud',
+    key: 'crud/search-table',
   },
 ];
 
