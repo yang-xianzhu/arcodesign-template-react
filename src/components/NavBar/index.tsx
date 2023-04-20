@@ -28,13 +28,13 @@ import { GlobalState } from '@/store';
 import { GlobalContext } from '@/context';
 import useLocale from '@/utils/useLocale';
 import Logo from '@/assets/logo.svg';
-import MessageBox from '@/components/MessageBox';
 import IconButton from './IconButton';
 import Settings from '../Settings';
 import styles from './style/index.module.less';
 import defaultLocale from '@/locale';
 import useStorage from '@/utils/useStorage';
 import { generatePermission } from '@/routes';
+// import MessageBox from '@/components/MessageBox';
 
 function Navbar({ show }: { show: boolean }) {
   const t = useLocale();
@@ -140,16 +140,17 @@ function Navbar({ show }: { show: boolean }) {
       <div className={styles.left}>
         <div className={styles.logo}>
           <Logo />
-          <div className={styles['logo-name']}>Arco Pro</div>
+          <div className={styles['logo-name']}>后台管理系统</div>
         </div>
       </div>
       <ul className={styles.right}>
-        <li>
+        {/* 搜索框 */}
+        {/* <li>
           <Input.Search
             className={styles.round}
             placeholder={t['navbar.search.placeholder']}
           />
-        </li>
+        </li> */}
         <li>
           <Select
             triggerElement={<IconButton icon={<IconLanguage />} />}
@@ -171,11 +172,12 @@ function Navbar({ show }: { show: boolean }) {
             }}
           />
         </li>
-        <li>
+        {/* 消息盒子 */}
+        {/* <li>
           <MessageBox>
             <IconButton icon={<IconNotification />} />
           </MessageBox>
-        </li>
+        </li> */}
         <li>
           <Tooltip
             content={
@@ -193,7 +195,7 @@ function Navbar({ show }: { show: boolean }) {
         <Settings />
         {userInfo && (
           <li>
-            <Dropdown droplist={droplist} position="br">
+            <Dropdown droplist={droplist} position="br" trigger="click">
               <Avatar size={32} style={{ cursor: 'pointer' }}>
                 <img alt="avatar" src={userInfo.avatar} />
               </Avatar>

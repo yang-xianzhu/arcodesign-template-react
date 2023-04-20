@@ -16,6 +16,8 @@ import checkLogin from './utils/checkLogin';
 import changeTheme from './utils/changeTheme';
 import useStorage from './utils/useStorage';
 import './mock';
+// 引入uno.css
+import 'virtual:uno.css';
 
 const store = createStore(rootReducer);
 

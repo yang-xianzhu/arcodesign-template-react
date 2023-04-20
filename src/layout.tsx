@@ -3,8 +3,9 @@ import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Spin } from '@arco-design/web-react';
 import cs from 'classnames';
 import {
-  IconDashboard,
+  IconHome,
   IconTag,
+  IconAttachment,
   IconMenuFold,
   IconMenuUnfold,
 } from '@arco-design/web-react/icon';
@@ -30,9 +31,11 @@ const Content = Layout.Content;
 function getIconFromKey(key) {
   switch (key) {
     case 'dashboard':
-      return <IconDashboard className={styles.icon} />;
-    case 'example':
+      return <IconHome className={styles.icon} />;
+    case 'test':
       return <IconTag className={styles.icon} />;
+    case 'crud':
+      return <IconAttachment className={styles.icon} />;
     default:
       return <div className={styles['icon-empty']} />;
   }

@@ -1,3 +1,4 @@
+// 更换主题色
 function changeTheme(theme) {
   if (theme === 'dark') {
     document.body.setAttribute('arco-theme', 'dark');
